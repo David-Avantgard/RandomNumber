@@ -1,0 +1,76 @@
+<!-- --------------------------------------------------------------------------------------------------
+Author: David Carvalho
+Date: 28/12/2025
+Project: Number Generator (Random Number Picker)
+Description: Study project developed during the Full Stack development learning process at DevClub.
+Functionality: Generates a random number between two values defined by the user.
+Technologies: HTML5, CSS3, JavaScript
+--------------------------------------------------------------------------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Character encoding (supports accents and special characters) -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive layout for mobile and desktop devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Project title -->
+    <title>Number Generator</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/Favicon.png">
+
+    <!-- Basic configuration -->
+    <meta name="description"
+        content="Generates a random number between user-defined values during the Full Stack learning journey at DevClub.">
+    <meta name="author" content="David Carvalho">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>      
+    <main>        
+        <div class="logo-container">
+            <img class="image-logo" src="./assets/logo.png" alt="image-logo">
+        </div>
+        
+        <section>              
+            <h2>SORTEAR UM NÚMERO</h2>
+            
+            <div class="Inputs">
+                <!-- Inputs -->    
+                <input type="number" class="minValue" placeholder="Entre" step="1" required>
+                <input type="number" class="maxValue" placeholder="e" step="1" required>
+            </div>
+                
+            <!-- Action button -->
+            <button class="generateButton">SORTEAR</button>          
+        
+            <!-- Print the result -->
+            <h1 class="result">
+              <span id="result-number"></span>
+            </h1>    
+        </section>       
+    </main>
+  
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 — Desenvolvido por <b>David Carvalho</b><br>
+            Projeto educacional <b>DevClub</b></p>
+        <p class="contact"><b>Contato</b> +55 (45) 9.9922-3818</p>
+    </footer>
+
+    <!-- Loading the js file -->
+    <script src="./scripts.js"></script>
+</body>
+</html>

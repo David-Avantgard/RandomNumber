@@ -1,0 +1,170 @@
+/*-----------------------------------------------------------------------------------------
+Author: David Carvalho
+Date: 28/12/2025
+Project: Number Generator (Random Number Picker)
+Description: Stylesheet responsible for layout, responsiveness, and visual presentation.
+----------------------------------------------------------------------------------------*/
+
+/* Default Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Defines the total height of the viewport to support full-screen layout */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Body */
+body {
+  background: url("./assets/BackGroud.png") center / cover no-repeat fixed;
+  display: flex;
+  justify-content: flex-start;    /* move content up */
+  align-items: center;            /* keeps horizontal center */
+  min-height: 100vh;              /* ensures full height */
+  padding-top: 20px;              /* small spacing from top */
+  flex-direction: column;         /* children stacked vertically */
+}
+
+/* Main */
+main {
+  width: auto;                 
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;         
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    justify-content: center; /* horizontally center logo */
+}
+
+.image-logo {
+    width: 500px;
+    height: auto;
+}
+
+@media (max-width: 500px) {
+    .image-logo {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* Section */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Title */
+section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #FFF;
+}
+
+/* Input Container */
+.Inputs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #FFF;
+  opacity: 1;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+/* Inputs */
+.Inputs input {
+  width: 300px;
+  height: 60px;
+  font-size: 25px;
+  padding: 0 12px;
+  border-radius: 15px;
+  color: #FFF;
+  border: solid 3px #FFF;
+  background-color: #30BB91;
+  cursor: pointer;
+}
+
+/* Button */
+.generateButton {
+  width: 200px;
+  height: 48px;
+  font-size: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #000;
+  background-color: #30BB91;
+  border: solid 3px #FFF;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.generateButton:hover {
+  transform: scale(1.05); /* slightly grows */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* light shadow */
+  opacity: 0.9;
+}
+
+.generateButton:active {
+  transform: scale(0.98); /* click effect */
+  opacity: 0.6;
+}
+
+/* Result container */
+.result {
+    margin-top: 20px;         
+    text-align: center;       
+    font-size: 36px;          
+    font-weight: 700;         
+}
+
+/* Only the drawn number */
+#result-number {
+    font-size: 40px;           /* fits screen */
+    max-width: 100%;           /* prevents overflow */
+    font-weight: 700;          
+    color: #FFF;            
+    display: inline-block;     
+    animation: pulse 1.2s infinite alternate; /* pulsating animation */
+    word-wrap: break-word;     /* wraps long numbers */
+    opacity: 0;                /* starts hidden for fade-in */
+    transition: opacity 0.5s ease-in-out; /* smooth fade-in */
+}
+
+/* Blinking / dancing animation */
+@keyframes pulse {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.15) rotate(-3deg); opacity: 0.8; }
+    100% { transform: scale(1); rotate(3deg); opacity: 1; }
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  right: 70px;
+  bottom: 50px;
+  text-align: right;
+  font-size: 20px;
+  color: #FFF;
+}
+
+.contact {
+  font-size: 14px;
+  color: #30BB91;
+}
