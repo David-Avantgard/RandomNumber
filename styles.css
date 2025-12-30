@@ -12,6 +12,10 @@ Description: Stylesheet responsible for layout, responsiveness, and visual prese
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+/* Body locked to prevent bursting. */
+body {
+  overflow-x: hidden;
+}
 
 /* Defines the total height of the viewport to support full-screen layout */
 html, body {
@@ -46,7 +50,8 @@ main {
 }
 
 .image-logo {
-    width: 500px;
+    width: 100%;
+    max-width: 300px ;   
     height: auto;
 }
 
@@ -77,6 +82,7 @@ section h2 {
   display: flex;
   justify-content: center;
   gap: 20px;
+  width: 100%;
 }
 
 /* Placeholder */
@@ -91,7 +97,8 @@ input:focus::placeholder {
 
 /* Inputs */
 .Inputs input {
-  width: 300px;
+  width: 100%;
+  max-width: 150px;
   height: 60px;
   font-size: 25px;
   padding: 0 12px;
